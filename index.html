@@ -10,18 +10,124 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <div>
-        <img src=image0.jpeg width=300px style="float:right;margin:25px 25px;border:5px solid black" usemap="#workmap"display=block>
+
+    <style type="text/css">
+		
+		body {
+			margin: 0;
+		}
+
+		/* NAV BAR */
+
+		.nav-bar {
+			width: 100%;
+			height: 50px;
+			margin: 0;
+			background: black;
+
+			/* Toggle between static and sticky */
+
+			position: sticky;
+			top: 20px;
+		}
+
+		.nav-bar > .element {
+			width: 19.5%;
+			line-height: 50px;
+			text-align: center;
+			color: white;
+			display: inline-block;
+			margin: 0;
+			font-family: Arial;
+			text-decoration: none;
+		}
+
+		.nav-bar > .element:hover { 
+  			text-decoration: underline;
+		}	
+
+
+		/* BODY */
+
+		.content {
+			/* width: 80%; */
+			margin-left: 10%;
+            margin-right: 10%;
+            margin-top:2%
+            font:Verdana;
+            /* display:block; */
+            font-size:32px;
+		}
+
+        /* .content > .title {
+            font-size:88px;
+            color:brown;
+		} */
+
+        .title {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 0%;
+            font:Verdana;
+            font-size:105px;
+            color:brown;
+		}
+
+	</style>
+
+    <div class=nav-bar>
+    	<a href='nav_bar.html' class=element> Home </a>
+    	<a href='nav_bar.html' class=element> Experience </a>
+    	<a href='nav_bar.html' class=element> References </a>
+    	<a href='nav_bar.html' class=element> Directory </a>
+    	<a href='nav_bar.html' class=element> Contact </a>
+    </div>
+
+    <!-- <div class=content>
+        <p class=title>
+            Welcome to my website!
+        </p>
+        <p>
+            This is my brand new website. Click on the top of the picture for a surprise or on the bottom for something cute!
+        </p>
+        <p> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque 
+            dignissim elit, euismod mollis quam maximus ut. Fusce fermentum, arcu non 
+            imperdiet dignissim, magna est auctor dui, non luctus erat nisi accumsan mi. 
+            Aenean quis lacinia odio, at sodales ex. Sed faucibus aliquam placerat. 
+            Suspendisse varius fermentum egestas. Cras sed velit quis ligula accumsan 
+            aliquet. Praesent ac arcu id mi posuere feugiat. In convallis non ipsum quis 
+            ultrices. In vitae dolor ante. Nullam ante felis, facilisis non volutpat et, 
+            ultricies in lectus. Nam vitae neque nec dolor aliquet maximus.
+        </p>
+        <p>
+            Nulla facilisi. Cras placerat consectetur faucibus. Fusce congue, ligula 
+            ut tristique faucibus, lacus nisi accumsan lorem, at lacinia leo dui a velit. 
+            In malesuada risus ligula, sed rhoncus nulla pulvinar porta. Aenean ut nibh 
+            vel tellus varius malesuada sodales nec nibh. Aliquam auctor lectus sit 
+            amet nisl feugiat, a porta nisl iaculis. Quisque quis vehicula nisi. 
+            Nullam dapibus viverra dapibus. 
+        </p>
+    </div> -->
+
+
+    <p class=title>
+        Welcome to my website!
+    </p>
+
+    <div style="float:right;margin-right:10%;margin-left:2.5%;margin-top:3%;text-align:center">
+        <img width=300px src=image0.jpeg style="border:5px solid black" usemap="#workmap">
         <map name="workmap">
             <area shape="rect" coords="5,5,310,205" href="surprise.jpg">
             <area shape="rect" coords="5,205,310,410" href="dog.jpg">
         </map>
-        <p text-align=center display=block>Semawit Gebrehiwot</p>
+        <p>This is me!!</p>
     </div>
-    <p font="Verdana" font-size="88px">
-        Welcome to my website!
+
+    <p class=content>
+        This is my brand new website. Click on the top of the picture for a surprise or on the bottom for something cute!
     </p>
-    <p> 
+    <p class=content> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque 
         dignissim elit, euismod mollis quam maximus ut. Fusce fermentum, arcu non 
         imperdiet dignissim, magna est auctor dui, non luctus erat nisi accumsan mi. 
@@ -31,7 +137,7 @@
         ultrices. In vitae dolor ante. Nullam ante felis, facilisis non volutpat et, 
         ultricies in lectus. Nam vitae neque nec dolor aliquet maximus.
     </p>
-    <p>
+    <p class=content>
         Nulla facilisi. Cras placerat consectetur faucibus. Fusce congue, ligula 
         ut tristique faucibus, lacus nisi accumsan lorem, at lacinia leo dui a velit. 
         In malesuada risus ligula, sed rhoncus nulla pulvinar porta. Aenean ut nibh 
@@ -39,6 +145,7 @@
         amet nisl feugiat, a porta nisl iaculis. Quisque quis vehicula nisi. 
         Nullam dapibus viverra dapibus. 
     </p>
+
 
     <script type="text/javascript" src="interactions.js"></script>    <!-- Insert JQuery Script -->
 

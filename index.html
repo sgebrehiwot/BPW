@@ -12,6 +12,21 @@
 <body>
 
     <style type="text/css">
+        :root {
+            /* scheme 1 (https://colorpalettes.net/color-palette-4388/)*/
+            --color1: #000200;
+            --color2: #481210;
+            --color3: #A2484F;
+            --color4: #B75145;
+            --color5: #CB918D;
+
+            /* scheme 2 (https://colorpalettes.net/color-palette-4387/)*/
+            --color1: #221D07;
+            --color2: #837257;
+            --color3: #ABA48F;
+            --color4: #E9E3D0;
+            --color5: #E9EEEC;
+        }
 		
 		body {
 			margin: 0;
@@ -19,23 +34,31 @@
 
 		/* NAV BAR */
 
-		.nav-bar {
+		/* .nav-bar { */
             /* float:right; */
-			width: 80%;
+			/* width: 80%;
 			height: 100px;
 			margin: 0;
 			background: black;
             padding-left: 10%;
-            padding-right: 10%;
+            padding-right: 10%; */
 
 			/* Toggle between static and sticky */
-
+/* 
 			position: sticky;
 			top: 20px;
-		}
+		} */
+
+        .nav-bar {
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background: black;
+            left: 30px;
+        }
 
 		.nav-bar > .element {
-			width: 19.5%;
+			width: 100%;
 			line-height: 100px;
 			text-align: center;
             font-size: 30px;
@@ -64,12 +87,12 @@
 
 		.content {
 			/* width: 80%; */
-			margin-left: 10%;
-            margin-right: 10%;
+			margin-left: 300px;
+            margin-right: 5%;
             margin-top:2%;
             font:Gibson;
             /* display:block; */
-            font-size:32px;
+            font-size:25px;
 		}
 
         /* .content > .title {
@@ -78,22 +101,25 @@
 		} */
 
         .title {
-            margin-left: 10%;
-            margin-right: 10%;
-            margin-bottom: 0%;
+            padding-top: 2.5%;
+            margin-top: 0%;
+            margin-left: 300px;
+            margin-right: 5%;
+            margin-bottom: 0%; 
             font:Gibson;
-            font-size:105px;
+            font-size: 95px;
             color:brown;
+            white-space: nowrap;
 		}
 
 	</style>
 
     <div class=nav-bar>
-    	<a href='index.html' class=element> Home </a>
-    	<a href='wip.png' class=element> Experience </a>
-    	<a href='wip.png' class=element> References </a>
-    	<a href='wip.png' class=element> Projects </a>
-    	<a href='wip.png' class=element> Contact </a>
+    	<div href='index.html' class=element style="padding-top:25px"> Home</div>
+    	<div href='wip.png' class=element> Experience </a></div>
+    	<div href='wip.png' class=element> References </a></div>
+    	<div href='wip.png' class=element> Projects </a></div>
+    	<div href='wip.png' class=element> Contact </a></div>
     </div>
 
     <p class=title>

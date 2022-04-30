@@ -19,10 +19,12 @@ $(document).ready(function() {
         }
     });
 
-    $(document).ready(function(){
-        $(".searchbar").keyup(function(event) {
-            var k = $(this).val();
-            console.log(k);
-        });
+    $(".searchbar").keyup(function(event) {
+        var k = $(this).val();
+        console.log(k);
     });
+
+    $(".title").css("color", "#white");
+    $(".title").css("padding-left", "350px");
+    $(".title").css("transition", "padding-left 3s ease 1s, color 3s ease 1s;");
 });

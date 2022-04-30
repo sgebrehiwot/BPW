@@ -130,16 +130,32 @@ a {
 .title {
     width: 100%;
     margin-top: 0%;
-    padding-left: 350px;
+    padding-left: 101%;
     /* margin-right: 50px; */
     margin-bottom: 0%; 
     font:Gibson;
     /* font-size: 85px; */
     font-size: 200px;
-    color: white;
+    color: var(--color2);
     white-space: nowrap;
     background: var(--color2);
+    /* opacity: 0; */
+    transition: none;
 }
+
+.title:hover {
+    /* opacity: 1; */
+    color: white;
+    padding-left: 350px;
+    transition: color 3s ease 1s, 
+                padding-left 3s ease 1s;
+    /* transition:  3s ease 1s; */
+}
+
+/* @keyframes name {
+    from {property: value;} to {property: value;) 
+} */
+
 .content {
     width: calc(100% - 5% - 300px - 50px - 50px);
     margin-left: 350px;

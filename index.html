@@ -19,8 +19,8 @@
             --color3: #A2484F;
             --color4: #B75145;
             --color5: #CB918D;
-            --color6: #F7F7F2;
-            --color6: #F2F5EA;
+            /* --color6: #F7F7F2; */
+            /* --color6: #F2F5EA; */
             --color6: #EFD9CE;
 
             /* scheme 2 (https://colorpalettes.net/color-palette-4387/)*/
@@ -134,25 +134,25 @@
         }
 
         .title {
-            width: calc(100% - 5% - 300px - 2.5%);
-            padding-top: 5%;
+            width: calc(100% - 5% - 300px - 50px - 50px);
+            padding-top: 5.5%;
             margin-top: 0%;
-            margin-left: 300px;
-            margin-right: 5%;
+            margin-left: 350px;
+            /* margin-right: 50px; */
             margin-bottom: 0%; 
             font:Gibson;
-            font-size: 93px;
+            font-size: 85px;
             color: white;
-            white-space: nowrap;
+            /* white-space: nowrap; */
 		}
 		.content {
-			width: calc(100% - 5% - 300px - 2.5%);
-			margin-left: 300px;
-            margin-right: 5%;
+			width: calc(100% - 5% - 300px - 50px - 50px);
+			margin-left: 350px;
+            /* margin-right: 50px; */
             margin-top:2%;
             font:Gibson;
             /* display:block; */
-            font-size:20px;
+            font-size:25px;
             color: var(--color1);
 		}
 
@@ -162,6 +162,17 @@
 		} */
 
 	</style>
+
+    <script type="text/javascript">
+        $("html").on('click', function() {
+            $("body").get(0).style.setProperty("--color1", "#221D07");
+            $("body").get(0).style.setProperty("--color2", "#713E5A");
+            $("body").get(0).style.setProperty("--color3", "#837257");
+            $("body").get(0).style.setProperty("--color4", "#ABA48F");
+            $("body").get(0).style.setProperty("--color5", "#E9E3D0");
+            $("body").get(0).style.setProperty("--color6", "#E9EEEC");
+        });
+    </script>
 
     <div class=pic>
         <img height=300px width=225px src=image0.jpeg style="border:5px solid var(--color3)" usemap="#workmap">

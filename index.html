@@ -21,11 +21,11 @@
             --color5: #CB918D;
 
             /* scheme 2 (https://colorpalettes.net/color-palette-4387/)*/
-            --color1: #221D07;
+            /* --color1: #221D07;
             --color2: #837257;
             --color3: #ABA48F;
             --color4: #E9E3D0;
-            --color5: #E9EEEC;
+            --color5: #E9EEEC; */
         }
 		
 		body {
@@ -34,35 +34,20 @@
 
 		/* NAV BAR */
 
-		/* .nav-bar { */
-            /* float:right; */
-			/* width: 80%;
-			height: 100px;
-			margin: 0;
-			background: black;
-            padding-left: 10%;
-            padding-right: 10%; */
-
-			/* Toggle between static and sticky */
-/* 
-			position: sticky;
-			top: 20px;
-		} */
-
         .nav-bar {
             position: fixed;
-            width: 200px;
+            width: 15%;
             height: 100%;
-            background: black;
-            left: 30px;
+            background: var(--color5);
+            left: calc(2.5% + ((225px + 10px)/2 - 15%/2));
         }
 
 		.nav-bar > .element {
 			width: 100%;
-			line-height: 100px;
+			line-height: 75px;
 			text-align: center;
             font-size: 30px;
-			color: white;
+			color: var(--color2);
 			display: inline-block;
 			margin: 0;
 			font-family: Gibson;
@@ -82,17 +67,39 @@
             font-size: 40px;
 		}	 */
 
+        .pic {
+            /* float:left; */
+            position: fixed;
+            z-index: 1;
+            margin-right:5%;
+            margin-left:2.5%;
+            margin-top:3%;
+            text-align:center;
+        }
 
 		/* BODY */
 
+        .title {
+            width: calc(100% - 5% - 300px - 2.5%);
+            padding-top: 5%;
+            margin-top: 0%;
+            margin-left: 300px;
+            margin-right: 5%;
+            margin-bottom: 0%; 
+            font:Gibson;
+            font-size: 93px;
+            color: var(--color2);
+            white-space: nowrap;
+		}
 		.content {
-			/* width: 80%; */
+			width: calc(100% - 5% - 300px - 2.5%);
 			margin-left: 300px;
             margin-right: 5%;
             margin-top:2%;
             font:Gibson;
             /* display:block; */
-            font-size:25px;
+            font-size:20px;
+            color: var(--color1);
 		}
 
         /* .content > .title {
@@ -100,22 +107,18 @@
             color:brown;
 		} */
 
-        .title {
-            padding-top: 2.5%;
-            margin-top: 0%;
-            margin-left: 300px;
-            margin-right: 5%;
-            margin-bottom: 0%; 
-            font:Gibson;
-            font-size: 95px;
-            color:brown;
-            white-space: nowrap;
-		}
-
 	</style>
 
+    <div class=pic>
+        <img height=300px width=225px src=image0.jpeg style="border:5px solid var(--color3)" usemap="#workmap">
+        <map name="workmap">
+            <area shape="rect" coords="5,5,310,205" href="surprise.jpg">
+            <area shape="rect" coords="5,205,310,410" href="dog.jpg">
+        </map>
+    </div>
+
     <div class=nav-bar>
-    	<div href='index.html' class=element style="padding-top:25px"> Home</div>
+    	<div href='index.html' class=element style="padding-top:350px"> Home</div>
     	<div href='wip.png' class=element> Experience </a></div>
     	<div href='wip.png' class=element> References </a></div>
     	<div href='wip.png' class=element> Projects </a></div>
@@ -126,17 +129,26 @@
         Welcome to my website!
     </p>
 
-    <div style="float:right;margin-right:10%;margin-left:2.5%;margin-top:3%;text-align:center">
-        <img width=300px src=image0.jpeg style="border:5px solid black" usemap="#workmap">
-        <map name="workmap">
-            <area shape="rect" coords="5,5,310,205" href="surprise.jpg">
-            <area shape="rect" coords="5,205,310,410" href="dog.jpg">
-        </map>
-        <p>This is me!!</p>
-    </div>
-
     <p class=content>
         This is my brand new website. Click on the top of the picture for a surprise or on the bottom for something cute!
+    </p>
+    <p class=content> 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque 
+        dignissim elit, euismod mollis quam maximus ut. Fusce fermentum, arcu non 
+        imperdiet dignissim, magna est auctor dui, non luctus erat nisi accumsan mi. 
+        Aenean quis lacinia odio, at sodales ex. Sed faucibus aliquam placerat. 
+        Suspendisse varius fermentum egestas. Cras sed velit quis ligula accumsan 
+        aliquet. Praesent ac arcu id mi posuere feugiat. In convallis non ipsum quis 
+        ultrices. In vitae dolor ante. Nullam ante felis, facilisis non volutpat et, 
+        ultricies in lectus. Nam vitae neque nec dolor aliquet maximus.
+    </p>
+    <p class=content>
+        Nulla facilisi. Cras placerat consectetur faucibus. Fusce congue, ligula 
+        ut tristique faucibus, lacus nisi accumsan lorem, at lacinia leo dui a velit. 
+        In malesuada risus ligula, sed rhoncus nulla pulvinar porta. Aenean ut nibh 
+        vel tellus varius malesuada sodales nec nibh. Aliquam auctor lectus sit 
+        amet nisl feugiat, a porta nisl iaculis. Quisque quis vehicula nisi. 
+        Nullam dapibus viverra dapibus. 
     </p>
     <p class=content> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque 

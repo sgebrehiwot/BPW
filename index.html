@@ -22,13 +22,16 @@
             /* --color6: #F7F7F2; */
             /* --color6: #F2F5EA; */
             --color6: #EFD9CE;
+            --flower_pic: url(pink_flowers.png);
 
             /* scheme 2 (https://colorpalettes.net/color-palette-4387/)*/
             /* --color1: #221D07;
-            --color2: #837257;
-            --color3: #ABA48F;
-            --color4: #E9E3D0;
-            --color5: #E9EEEC; */
+            --color2: #713E5A;
+            --color3: #837257;
+            --color4: #ABA48F;
+            --color5: #E9E3D0; 
+            --color6: #E9EEEC; 
+            --flower_pic: url(white_flowers.png);*/
         }
 		
 		body {
@@ -114,8 +117,8 @@
 		/* BODY */
 
         .banner {
-            background-image:url(pink_flowers.png);
-            background-repeat:repeat-x;
+            background-image: var(--flower_pic);
+            background-repeat: repeat-x;
             position: fixed;
             width: 100%;
             height: 100px;
@@ -161,18 +164,59 @@
             color:brown;
 		} */
 
+        .pic > .pic-frame { 
+            /* transform: rotate(0deg); */
+            /* height: 305px; 
+            width: 230px;
+            background: var(--color3);
+            position: fixed;
+            z-index: 1;
+            margin-right:5%;
+            margin-left:2.5%;
+            margin-top:3%;
+            text-align:center; */
+
+            rotate: 0deg;
+            /* opacity: 0.5; */
+        }
+
+        .pic:hover > .pic-frame { 
+            /* transform: rotate(45deg); */
+            rotate: 45deg;
+            transition: rotate 2s linear 0s; 
+        }
+
 	</style>
 
     <script type="text/javascript">
         $("html").on('click', function() {
-            $("body").get(0).style.setProperty("--color1", "#221D07");
-            $("body").get(0).style.setProperty("--color2", "#713E5A");
-            $("body").get(0).style.setProperty("--color3", "#837257");
-            $("body").get(0).style.setProperty("--color4", "#ABA48F");
-            $("body").get(0).style.setProperty("--color5", "#E9E3D0");
-            $("body").get(0).style.setProperty("--color6", "#E9EEEC");
+            if($(":root").css("--color1") == "#221D07") {
+                $(":root").css("--color1", "#000200");
+                $(":root").css("--color2", "#481210");
+                $(":root").css("--color3", "#A2484F");
+                $(":root").css("--color4", "#B75145");
+                $(":root").css("--color5", "#CB918D");
+                $(":root").css("--color6", "#EFD9CE");
+                $(":root").css("--flower_pic", "url(pink_flowers.png)");
+            } else {
+                $(":root").css("--color1", "#221D07");
+                $(":root").css("--color2", "#713E5A");
+                $(":root").css("--color3", "#837257");
+                $(":root").css("--color4", "#ABA48F");
+                $(":root").css("--color5", "#E9E3D0");
+                $(":root").css("--color6", "#E9EEEC");
+                $(":root").css("--flower_pic", "url(white_flowers.png)");
+            }
+        });
+
+        $(document).ready(function(){
+            $(".searchbar").keyup(function(event) {
+                var k = $(this).val();
+                console.log(k);
+            });
         });
     </script>
+
 
     <div class=pic>
         <img height=300px width=225px src=image0.jpeg style="border:5px solid var(--color3)" usemap="#workmap">
@@ -180,6 +224,8 @@
             <area shape="rect" coords="5,5,310,205" href="surprise.jpg">
             <area shape="rect" coords="5,205,310,410" href="dog.jpg">
         </map>
+        <div class=pic-frame>
+        </div>
     </div>
 
     <div class=nav-bar>
@@ -202,7 +248,8 @@
     </p>
 
     <p class=content>
-        This is my brand new website. Click on the top of the picture for a surprise or on the bottom for something cute!
+        This is my brand new website. Click on the top of the picture for a 
+        surprise or on the bottom for something cute! Click on the background to change the color scheme.
     </p>
     <p class=content> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque 

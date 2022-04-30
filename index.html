@@ -44,7 +44,7 @@
 
 		.nav-bar > .element {
 			width: 100%;
-			line-height: 75px;
+			line-height: 65px;
 			text-align: center;
             font-size: 30px;
 			color: var(--color2);
@@ -67,6 +67,18 @@
             font-size: 40px;
 		}	 */
 
+        .searchbar {
+			width: 75%;
+			/* height: 35px; */
+			margin-left: calc(25%/2);
+            margin-top: 5%;
+			line-height: 20px;
+			font-size: 12px;
+			/* text-indent: 10px; */
+            text-align:center;
+            background-color: grey;
+		}
+
         .pic {
             /* float:left; */
             position: fixed;
@@ -78,6 +90,14 @@
         }
 
 		/* BODY */
+
+        /* .title-bar {
+            position: fixed;
+            width: 15%;
+            height: 100%;
+            background: var(--color5);
+            left: calc(2.5% + ((225px + 10px)/2 - 15%/2));
+        } */
 
         .title {
             width: calc(100% - 5% - 300px - 2.5%);
@@ -123,6 +143,7 @@
     	<div href='wip.png' class=element> References </a></div>
     	<div href='wip.png' class=element> Projects </a></div>
     	<div href='wip.png' class=element> Contact </a></div>
+        <input class=searchbar type="text" placeholder="-<<: Search this site :>>-"> 
     </div>
 
     <p class=title>
